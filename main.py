@@ -98,6 +98,6 @@ HELLO {message.from_user.mention} I AM PYROGRAM BOT UNDER CONSTRUCTION
         elif update.data == "delete":
              await update.message.delete()
 
-
+print("Bot Started")
 
 KingAbhi.run()

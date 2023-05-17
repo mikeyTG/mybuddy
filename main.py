@@ -19,7 +19,7 @@ HELLO {} I AM PYROGRAM BOT UNDER CONSTRUCTION
 
 
 
-HELP MESSAGE = """
+HELP_MESSAGE = """
 DONT SHIT HERE
 """
 
@@ -57,7 +57,7 @@ async def start_message(bot, message):
 @KingAbhi.on_message(filters.command("help"))
 async def help_message(bot : KingAbhi, message: Message):
          await message.reply_text(
-                  text="HELP MESSAGE"
+                  text="HELP_MESSAGE"
          )
 
 

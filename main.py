@@ -82,7 +82,7 @@ Hey {first_name} Wassup!!🤖
 💤what are you looking type /info or click info button💘
 """
                         reply_markup=InlineKeyboardMarkup( [[
-                                InlineKeyboardButton("start", callback_data="start"
+                                InlineKeyboardButton("start", callback_data="start")
                                 ]]
                         )
                )
@@ -99,7 +99,7 @@ Hey {first_name} Wassup!!🤖
 〽Mention - {msg.from_user.mention}"""
     O_O @myself_gon
                         reply_markup=InlineKeyboardMarkup( [[
-                                InlineKeyboardButton("start", callback_data="start"
+                                InlineKeyboardButton("start", callback_data="start")
                                 ]]
                         )
 
@@ -113,7 +113,7 @@ Support meh by joining
  @TakeMehDown
 """
                         reply_markup=InlineKeyboardMarkup( [[
-                                InlineKeyboardButton("start", callback_data="start"
+                                InlineKeyboardButton("start", callback_data="start")
                                 ]]
                         )
 

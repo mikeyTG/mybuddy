@@ -41,7 +41,6 @@ START_BUTTON = [[
 
 
 
-
 @KingAbhi.on_message(filters.command("start"))
 async def start_message(bot, message):
          await message.reply_text(
@@ -49,7 +48,6 @@ async def start_message(bot, message):
                   reply_markup=InlineKeyboardMarkup(START_BUTTON)
          )
                  
-                  
     if force_channel:
         try:
             user = await bot.get_chat_member(force_channel, message.from_user.id)

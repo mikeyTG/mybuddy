@@ -49,9 +49,10 @@ async def start_message(bot, message):
                   reply_markup=InlineKeyboardMarkup(START_BUTTON)
          )
                  
-if force_channel:
+                  
+    if force_channel:
         try:
-            user = await message.get_chat_member(force_channel, message.from_user.id)
+            user = await bot.get_chat_member(force_channel, message.from_user.id)
             if user.status == "kicked out":
                 await message.reply_text("You are Banned")
                 return

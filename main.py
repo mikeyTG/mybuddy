@@ -1,8 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.types import CallbackQuery
-from pyrogram.errors import UserNotParticipant
-force_channel = "the_aecr"
+
 
 
 KingAbhi = Client(
@@ -48,20 +47,7 @@ async def start_message(bot, message):
                   reply_markup=InlineKeyboardMarkup(START_BUTTON)
          )
                  
-    if force_channel:
-        try:
-            user = await bot.get_chat_member(force_channel, message.from_user.id)
-            if user.status == "kicked out":
-                await message.reply_text("You are Banned")
-                return
-        except UserNotParticipant:
-            await message.reply_text(
-                text="u r not sub my channel",
-                reply_markup=InlineKeyboardMarkup( [[
-                 InlineKeyboardButton("JOIN HERE", url=f"t.me/{force_channel}")
-                 ]]
-                )
-            )
+    
 
                  
 

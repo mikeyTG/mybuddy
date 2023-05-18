@@ -30,11 +30,11 @@ async def start_message(bot, message):
             InlineKeyboardButton("Dev🕵🏿‍♀️", url="t.me/myself_gon")
             ],[
             InlineKeyboardButton("START", callback_data="start"),
-            InlineKeyboardButton("HELP", callback_data"help")
+            InlineKeyboardButton("HELP", callback_data="help")
             ],[
-            InlineKeyboardButton("ABOUT", callback_data"about"),
-            InlineKeyboardButton("INFO", callback_data"info"),
-            InlineKeyboardButton("SUPPORT", callback_data"support")
+            InlineKeyboardButton("ABOUT", callback_data="about"),
+            InlineKeyboardButton("INFO", callback_data="info"),
+            InlineKeyboardButton("SUPPORT", callback_data="support")
             ]]
          await message.reply_photo(
          photo=random.choice(ALL_PICS),
@@ -54,11 +54,11 @@ Hey {first_name} Wassup!!🤖
                                 InlineKeyboardButton("Dev🕵🏿‍♀️", url="t.me/myself_gon")
                                 ],[
                                 InlineKeyboardButton("START", callback_data="start"),
-                                InlineKeyboardButton("HELP", callback_data"help")
+                                InlineKeyboardButton("HELP", callback_data="help")
                                 ],[
-                                InlineKeyboardButton("ABOUT", callback_data"about"),
-                                InlineKeyboardButton("INFO", callback_data"info"),
-                                InlineKeyboardButton("SUPPORT", callback_data"support")
+                                InlineKeyboardButton("ABOUT", callback_data="about"),
+                                InlineKeyboardButton("INFO", callback_data="info"),
+                                InlineKeyboardButton("SUPPORT", callback_data="support")
                                 ]]
                         )
                )

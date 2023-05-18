@@ -79,9 +79,9 @@ async def help_message(bot : KingAbhi, message: Message):
 
 @KingAbhi.on_message(filters.command("info"))
 async def info(bot, msg):
-         text = """
+         text = f"""
 👉🏿Name - {msg.from_user.first_name}
-👉UserName - @{msg.from_user.username}
+👉🏿UserName - @{msg.from_user.username}
 👉🏿Id - {msg.from_user.id}
 👉🏿Mention - {msg.from_user.mention}"""
 

@@ -1,102 +1,138 @@
 from pyrogram import Client, filters
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.types import CallbackQuery
+import random   
 
 
-
-KingAbhi = Client(
-      name="PyrogramBot",
-      bot_token="5805245861:AAEkDOk9qLRts5px8vF1vm2bslC3cH5KFZg",
-      api_id="26974083",
-      api_hash="e013696bd13ea9495b803a679852da59"
+TakeMehDown=Client(
+         "Pyrogram Bot",
+         bot_token="5533296789:AAE1Rpz3ppw9b-XGWPqY3GekKIENreN1ACs",
+         api_id="1641138",
+         api_hash="49db06aedd730fd89dd0fc9c84fd656f"
 )
 
 
+ALL_PICS = [ 
+ "https://telegra.ph/file/702d8555404645e94e6fb.jpg",
+ "https://telegra.ph/file/ecf7954d4e47d10c5becb.jpg",
+ "https://telegra.ph/file/71bed9d4da74ec5c341a1.jpg"
+]
+
 
 START_MESSAGE = """
-HELLO {} I AM PYROGRAM BOT UNDER CONSTRUCTION
+Hey {} Wassup!!🤖
 """
 
 
-
-HELP_MESSAGE = """
-DONT SHIT HERE
-"""
-
-
-
-
-
-START_BUTTON = [[
-    InlineKeyboardButton("Dev🤴🏿", url="t.me/clause07")
-    ],[
-    InlineKeyboardButton("😯HELP", callback_data="help"),
-    InlineKeyboardButton("INFO👀", callback_data="info")
-    ],[
-    InlineKeyboardButton("🏴‍☠️Delete", callback_data="delete")
-    ]]
- 
-
-
-
-
-@KingAbhi.on_message(filters.command("start"))
+@TakeMehDown.on_message(filters.command("start"))
 async def start_message(bot, message):
-         await message.reply_text(
-                  text=START_MESSAGE.format(message.from_user.mention),
-                  reply_markup=InlineKeyboardMarkup(START_BUTTON)
+         button = [[
+            InlineKeyboardButton("Dev🕵🏿‍♀️", url="t.me/myself_gon")
+            ],[
+            InlineKeyboardButton("START", callback_data="start"),
+            InlineKeyboardButton("HELP", callback_data"help")
+            ],[
+            InlineKeyboardButton("ABOUT", callback_data"about"),
+            InlineKeyboardButton("INFO", callback_data"info"),
+            InlineKeyboardButton("SUPPORT", callback_data"support")
+            ]]
+         await message.reply_photo(
+         photo=random.choice(ALL_PICS),
+                  caption=START_MESSAGE.format(message.from_user.menton),
+                  reply_markup=InlineKeyboardMarkup(button)
          )
-                 
-    
-
-                 
 
 
+@TakeMehDown.on_callback_query()
+async def callback(client: TakeMehDown, query: CallbackQuery):
+         if query.data == "start":
+               await query.message.edit(
+                        text=f"""
+Hey {first_name} Wassup!!🤖
+"""
+                        reply_markup=InlineKeyboardMarkup( [[
+                                InlineKeyboardButton("Dev🕵🏿‍♀️", url="t.me/myself_gon")
+                                ],[
+                                InlineKeyboardButton("START", callback_data="start"),
+                                InlineKeyboardButton("HELP", callback_data"help")
+                                ],[
+                                InlineKeyboardButton("ABOUT", callback_data"about"),
+                                InlineKeyboardButton("INFO", callback_data"info"),
+                                InlineKeyboardButton("SUPPORT", callback_data"support")
+                                ]]
+                        )
+               )
+                
 
-@KingAbhi.on_message(filters.command("help"))
-async def help_message(bot : KingAbhi, message: Message):
-         await message.reply_text(
-                  text="HELP_MESSAGE"
-         )
+         elif query.data == "help":
+               await msg.message.edit(
+                        text="""
+👶🏿what the fuck do you want!!? its mine sucker💢
+""",
+                        reply_markup=InlineKeyboardMarkup( [[
+                                InlineKeyboardButton("start", callback_data="start"
+                                ]]
+                        )
+                       
+               )
+
+         elif query.data == "about"
+               await msg.message.edit(
+                        text="""
+💤what are you looking type /info or click info button💘
+"""
+                        reply_markup=InlineKeyboardMarkup( [[
+                                InlineKeyboardButton("start", callback_data="start"
+                                ]]
+                        )
+               )
 
 
 
-@KingAbhi.on_message(filters.command("info"))
+         elif query.data == "info"
+               await msg.message.edit(
+                        text=f"""
+🤵🏿First Name - {msg.from_user.first_name}
+👨🏿‍💻Last Name - {msg.from_user.last_name}
+🕳Usrname - {msg.from_user.username} 
+🌐Id - {msg.from_user.id}
+〽Mention - {msg.from_user.mention}"""
+    O_O @myself_gon
+                        reply_markup=InlineKeyboardMarkup( [[
+                                InlineKeyboardButton("start", callback_data="start"
+                                ]]
+                        )
+
+               )
+
+
+         elif query.data == "support"
+               await msg.message.edit(
+                        text="""
+Support meh by joining 
+ @TakeMehDown
+"""
+                        reply_markup=InlineKeyboardMarkup( [[
+                                InlineKeyboardButton("start", callback_data="start"
+                                ]]
+                        )
+
+               )
+                                    
+
+
+@TakeMehDown.on_message(filters.command("info"))
 async def info(bot, msg):
          text = f"""
-👉🏿Name - {msg.from_user.first_name}
-👉🏿UserName - @{msg.from_user.username}
-👉🏿Id - {msg.from_user.id}
-👉🏿Mention - {msg.from_user.mention}"""
-
-         await msg.reply_text(text=text)
-      
-
-@KingAbhi.on_callback_query()
-async def callback(client: KingAbhi, update: CallbackQuery):
-
-        if update.data == "help":
-             await update.message.edit(
-                     text=f"""
-HELLO {message.from_user.mention} I AM PYROGRAM BOT UNDER CONSTRUCTION
-""",
-                     reply_markup=InlineKeyboardMarkup(START_BUTTON)
-             )
+🤵🏿First Name - {msg.from_user.first_name}
+👨🏿‍💻Last Name - {msg.from_user.last_name}
+🕳Usrname - {msg.from_user.username} 
+🌐Id - {msg.from_user.id}
+〽Mention - {msg.from_user.mention}"""
 
 
-        elif update.data == "info":
-             await update.message.edit(
-                     text= f"""
-👉🏿Name - {msg.from_user.first_name}
-👉🏿UserName - @{msg.from_user.username}
-👉🏿Id - {msg.from_user.id}
-👉🏿Mention - {msg.from_user.mention}""",
-                     reply_markup=InlineKeyboardMarkup(START_BUTTON)
-             )
+        await msg.reply_text(text=text)
 
-        elif update.data == "delete":
-             await update.message.delete()
 
-print("Bot Started")
-
-KingAbhi.run()
+  
+TakeMehDown.run()

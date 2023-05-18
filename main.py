@@ -70,7 +70,7 @@ Hey {first_name} Wassup!!🤖
 👶🏿what the fuck do you want!!? its mine sucker💢
 """,
                         reply_markup=InlineKeyboardMarkup( [[
-                                InlineKeyboardButton("start", callback_data="start"
+                                InlineKeyboardButton("start", callback_data="start")
                                 ]]
                         )
                        

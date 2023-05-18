@@ -35,7 +35,7 @@ START_BUTTON = [[
     ],[
     InlineKeyboardButton("🏴‍☠️Delete", callback_data="delete")
     ]]
-
+ 
 
 
 
@@ -86,7 +86,6 @@ HELLO {message.from_user.mention} I AM PYROGRAM BOT UNDER CONSTRUCTION
 
         elif update.data == "info":
              await update.message.edit(
-async def info(bot, msg):
                      text= f"""
 👉🏿Name - {msg.from_user.first_name}
 👉🏿UserName - @{msg.from_user.username}

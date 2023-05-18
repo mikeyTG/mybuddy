@@ -14,21 +14,6 @@ KingAbhi = Client(
 
 
 
-if force_channel:
-        try:
-            user = await update.get_chat_member(force_channel, update.from_user.id)
-            if user.status == "kicked out":
-                await update.reply_text("You are Banned")
-                return
-        except UserNotParticipant:
-            await update.reply_text(
-                text="u r not sub my channel",
-                reply_markup=InlineKeyboardMarkup( [[
-                 InlineKeyboardButton("JOIN HERE", url=f"t.me/{force_channel}")
-                 ]]
-                )
-            )
-
 START_MESSAGE = """
 HELLO {} I AM PYROGRAM BOT UNDER CONSTRUCTION
 """
@@ -64,7 +49,20 @@ async def start_message(bot, message):
                   reply_markup=InlineKeyboardMarkup(START_BUTTON)
          )
                  
-
+if force_channel:
+        try:
+            user = await update.get_chat_member(force_channel, message.from_user.id)
+            if user.status == "kicked out":
+                await message.reply_text("You are Banned")
+                return
+        except UserNotParticipant:
+            await message.reply_text(
+                text="u r not sub my channel",
+                reply_markup=InlineKeyboardMarkup( [[
+                 InlineKeyboardButton("JOIN HERE", url=f"t.me/{force_channel}")
+                 ]]
+                )
+            )
 
                  
 

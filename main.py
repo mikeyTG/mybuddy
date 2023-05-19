@@ -6,9 +6,9 @@ import random
 
 TakeMehDown=Client(
          "Pyrogram Bot",
-         bot_token="5533296789:AAE1Rpz3ppw9b-XGWPqY3GekKIENreN1ACs",
-         api_id="1641138",
-         api_hash="49db06aedd730fd89dd0fc9c84fd656f"
+         bot_token="5805245861:AAEkDOk9qLRts5px8vF1vm2bslC3cH5KFZg",
+         api_id="26974083",
+         api_hash="e013696bd13ea9495b803a679852da59"
 )
 
 

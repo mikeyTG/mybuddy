@@ -38,7 +38,7 @@ async def start_message(bot, message):
             ]]
          await message.reply_photo(
          photo=random.choice(ALL_PICS),
-                  caption=START_MESSAGE.format(message.from_user.menton),
+                  caption=START_MESSAGE.format(message.from_user.mention),
                   reply_markup=InlineKeyboardMarkup(button)
          )
 

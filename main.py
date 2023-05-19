@@ -47,9 +47,9 @@ async def start_message(bot, message):
 async def callback(client: TakeMehDown, query: CallbackQuery):
          if query.data == "start":
                await query.message.edit(
-                        text =f"""
+                        text = f"""
 Hey {first_name} Wassup!!🤖
-"""
+""",
                         reply_markup=InlineKeyboardMarkup( [[
                                 InlineKeyboardButton("Dev🕵🏿‍♀️", url="t.me/myself_gon")
                                 ],[
@@ -66,7 +66,7 @@ Hey {first_name} Wassup!!🤖
 
          elif query.data == "help":
                await msg.message.edit(
-                        text ="""
+                        text = """
 👶🏿what the fuck do you want!!? its mine sucker💢
 """,
                         reply_markup=InlineKeyboardMarkup( [[
@@ -78,9 +78,9 @@ Hey {first_name} Wassup!!🤖
 
          elif query.data == "about"
                await msg.message.edit(
-                        text ="""
+                        text = """
 💤what are you looking type /info or click info button💘
-"""
+""",
                         reply_markup=InlineKeyboardMarkup( [[
                                 InlineKeyboardButton("start", callback_data="start")
                                 ]]
@@ -91,13 +91,13 @@ Hey {first_name} Wassup!!🤖
 
          elif query.data == "info"
                await msg.message.edit(
-                        text =f"""
+                        text = f"""
 🤵🏿First Name - {msg.from_user.first_name}
 👨🏿‍💻Last Name - {msg.from_user.last_name}
 🕳Usrname - {msg.from_user.username} 
 🌐Id - {msg.from_user.id}
-〽Mention - {msg.from_user.mention}"""
-    O_O @myself_gon
+〽Mention - {msg.from_user.mention}
+    O_O @myself_gon""",
                         reply_markup=InlineKeyboardMarkup( [[
                                 InlineKeyboardButton("start", callback_data="start")
                                 ]]
@@ -108,10 +108,10 @@ Hey {first_name} Wassup!!🤖
 
          elif query.data == "support"
                await msg.message.edit(
-                        text ="""
+                        text = """
 Support meh by joining 
  @TakeMehDown
-"""
+""",
                         reply_markup=InlineKeyboardMarkup( [[
                                 InlineKeyboardButton("start", callback_data="start")
                                 ]]
@@ -123,7 +123,7 @@ Support meh by joining
 
 @TakeMehDown.on_message(filters.command("info"))
 async def info(bot, msg):
-         text =f"""
+         text = f"""
 🤵🏿First Name - {msg.from_user.first_name}
 👨🏿‍💻Last Name - {msg.from_user.last_name}
 🕳Usrname - {msg.from_user.username} 

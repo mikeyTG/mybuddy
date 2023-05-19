@@ -131,7 +131,7 @@ async def info(bot, msg):
 〽Mention - {msg.from_user.mention}"""
 
 
-        await msg.reply_text(text=text)
+               await msg.reply_text(text=text)
 
 
   

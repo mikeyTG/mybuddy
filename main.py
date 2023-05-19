@@ -76,7 +76,7 @@ Hey {first_name} Wassup!!🤖
                        
                )
 
-         elif query.data == "about"
+         elif query.data == "about":
                await msg.message.edit(
                         text = """
 💤what are you looking type /info or click info button💘
@@ -89,7 +89,7 @@ Hey {first_name} Wassup!!🤖
 
 
 
-         elif query.data == "info"
+         elif query.data == "info":
                await msg.message.edit(
                         text = f"""
 🤵🏿First Name - {msg.from_user.first_name}
@@ -106,7 +106,7 @@ Hey {first_name} Wassup!!🤖
                )
 
 
-         elif query.data == "support"
+         elif query.data == "support":
                await msg.message.edit(
                         text = """
 Support meh by joining 
